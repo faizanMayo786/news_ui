@@ -14,125 +14,127 @@ class Page1 extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
-          body: SizedBox(
-              height: double.infinity,
-              width: double.infinity,
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    CircleAvatar(
-                      radius: 75,
-                      backgroundImage: AssetImage(
-                        image,
+          body: Center(
+            child: SizedBox(
+                height: double.infinity,
+                width: 400,
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const SizedBox(
+                        height: 10,
                       ),
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    customText(text: "Flutter is Awesome", fontSize: 24),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    customText(
-                      text: "Student",
-                      fontSize: 14,
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        textColumn('872.4K', 'Hits'),
-                        Container(
-                          color: Colors.grey.shade300,
-                          height: 60,
-                          width: 1,
+                      CircleAvatar(
+                        radius: 75,
+                        backgroundImage: AssetImage(
+                          image,
                         ),
-                        textColumn(followers, 'Followers'),
-                        Container(
-                          color: Colors.grey.shade300,
-                          height: 60,
-                          width: 1,
-                        ),
-                        textColumn('127', 'Following'),
-                      ],
-                    ),
-                    const Divider(
-                      indent: 40,
-                      endIndent: 40,
-                      height: 30,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        roundFillButton(),
-                        roundOutlinedButton('Follow'),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Row(
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      customText(text: "Flutter is Awesome", fontSize: 24),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      customText(
+                        text: "Student",
+                        fontSize: 14,
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          customText(
-                            text: 'Top News',
-                            fontSize: 16,
-                          ),
-                          customText(
-                            text: 'Recents',
-                            fontSize: 16,
-                          ),
-                        ]),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const SizedBox(
-                          width: 200,
-                          child: Divider(
-                            indent: 20,
-                            thickness: 2,
-                            color: Colors.red,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 210,
-                          child: Divider(
-                            thickness: 2,
-                            endIndent: 20,
+                          textColumn('872.4K', 'Hits'),
+                          Container(
                             color: Colors.grey.shade300,
+                            height: 60,
+                            width: 1,
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 350,
-                      width: 400,
-                      child: Column(
-                        children: [
-                          listNews(
-                              'assets/images/1.PNG',
-                              'Wow! USA Develops New\nWay of Faster and More ...',
-                              'Health'),
-                          const SizedBox(
-                            height: 10,
+                          textColumn(followers, 'Followers'),
+                          Container(
+                            color: Colors.grey.shade300,
+                            height: 60,
+                            width: 1,
                           ),
-                          listNews(
-                              'assets/images/2.PNG',
-                              'Machester United Adds a\nFamous Portugal Player ...',
-                              'Sport'),
+                          textColumn('127', 'Following'),
                         ],
                       ),
-                    ),
-                  ],
-                ),
-              )),
+                      const Divider(
+                        indent: 40,
+                        endIndent: 40,
+                        height: 30,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          roundFillButton(),
+                          roundOutlinedButton('Website'),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            customText(
+                              text: 'Top News',
+                              fontSize: 16,
+                            ),
+                            customText(
+                              text: 'Recents',
+                              fontSize: 16,
+                            ),
+                          ]),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const SizedBox(
+                            width: 200,
+                            child: Divider(
+                              indent: 20,
+                              thickness: 2,
+                              color: Colors.red,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 200,
+                            child: Divider(
+                              thickness: 2,
+                              endIndent: 20,
+                              color: Colors.grey.shade300,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 350,
+                        width: 400,
+                        child: Column(
+                          children: [
+                            listNews(
+                                'assets/images/1.PNG',
+                                'Wow! USA Develops New\nWay of Faster and More ...',
+                                'Health'),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            listNews(
+                                'assets/images/2.PNG',
+                                'Machester United Adds a\nFamous Portugal Player ...',
+                                'Sport'),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                )),
+          ),
         ),
       ),
     );

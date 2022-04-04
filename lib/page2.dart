@@ -75,85 +75,90 @@ class Page2 extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-        body: Container(
-          height: double.infinity,
-          width: double.infinity,
-          color: const Color(0xFF1A1B22),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(25.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                      "Search Results",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
+        backgroundColor: const Color(0xFF1A1B22),
+        body: Center(
+          child: Container(
+            height: double.infinity,
+            width: 400,
+            color: const Color(0xFF1A1B22),
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(25.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text(
+                          "Search Results",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          "22,276 founds",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.red.shade300,
+                          ),
+                        ),
+                      ],
                     ),
-                    Text(
-                      "22,276 founds",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.red.shade300,
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                  customCard(
+                    image: 'assets/images/Mask Group.png',
+                    title: "BBC News",
+                    subtitle: '6.5M',
+                    isFollowing: true,
+                    context: context,
+                  ),
+                  customCard(
+                    image: 'assets/images/Auto Layout Horizontal.png',
+                    title: "CNN",
+                    subtitle: '616.3K',
+                    isFollowing: true,
+                    context: context,
+                  ),
+                  customCard(
+                    image: 'assets/images/3.png',
+                    title: "CNET",
+                    subtitle: '148K',
+                    context: context,
+                    isFollowing: false,
+                  ),
+                  customCard(
+                    image: 'assets/images/dailymail.jpg',
+                    title: "Daily Mail",
+                    subtitle: '577.4K',
+                    isFollowing: false,
+                    context: context,
+                  ),
+                  customCard(
+                    image: 'assets/images/time.png',
+                    title: "TIME",
+                    subtitle: '574.4K',
+                    isFollowing: true,
+                    context: context,
+                  ),
+                  customCard(
+                    image: 'assets/images/buzzfeed.png',
+                    title: "Buzzfeed",
+                    subtitle: '381.4K',
+                    isFollowing: false,
+                    context: context,
+                  ),
+                  customCard(
+                    image: 'assets/images/usa.png',
+                    title: "USA Today",
+                    subtitle: '365.5K',
+                    isFollowing: true,
+                    context: context,
+                  ),
+                ],
               ),
-              customCard(
-                image: 'assets/images/Mask Group.png',
-                title: "BBC News",
-                subtitle: '6.5M',
-                isFollowing: true,
-                context: context,
-              ),
-              customCard(
-                image: 'assets/images/Auto Layout Horizontal.png',
-                title: "CNN",
-                subtitle: '616.3K',
-                isFollowing: true,
-                context: context,
-              ),
-              customCard(
-                image: 'assets/images/3.png',
-                title: "CNET",
-                subtitle: '148K',
-                context: context,
-                isFollowing: false,
-              ),
-              customCard(
-                image: 'assets/images/dailymail.jpg',
-                title: "Daily Mail",
-                subtitle: '577.4K',
-                isFollowing: false,
-                context: context,
-              ),
-              customCard(
-                image: 'assets/images/time.png',
-                title: "TIME",
-                subtitle: '574.4K',
-                isFollowing: true,
-                context: context,
-              ),
-              customCard(
-                image: 'assets/images/buzzfeed.png',
-                title: "Buzzfeed",
-                subtitle: '381.4K',
-                isFollowing: false,
-                context: context,
-              ),
-              customCard(
-                image: 'assets/images/usa.png',
-                title: "USA Today",
-                subtitle: '365.5K',
-                isFollowing: true,
-                context: context,
-              ),
-            ],
+            ),
           ),
         ),
       ),
